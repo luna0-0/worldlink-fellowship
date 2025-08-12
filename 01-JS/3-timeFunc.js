@@ -1,16 +1,16 @@
 console.log("Start");
 
-// setTimeout(() => {
-//   console.log("Inside setTimeout");
-// }, 0);
+setTimeout(() => {
+  console.log("Inside setTimeout");
+}, 0);
 
-// setImmediate(()=>{
-//     console.log("Hello from setImmediate");
-// })
+setImmediate(()=>{
+    console.log("Hello from setImmediate");
+})
 
-// process.nextTick(()=>{
-//     console.log("process.nextTick");
-// })
+process.nextTick(()=>{
+    console.log("process.nextTick");
+})
 
 await new Promise((resolve, reject) => {
   setTimeout(() => {
