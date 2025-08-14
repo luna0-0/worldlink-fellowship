@@ -1,8 +1,6 @@
 const express = require("express");
 const router=express.Router();
 
-const app = express();
-
 router.get("/home", (req, res) => {
   res.send("This is home page");
 });
@@ -14,13 +12,13 @@ router.get("/user/:id", (req, res) => {
 });
 
 
-// router.get("/info/:id/education/:education/address/:address", (req, res) => {
-//   const id = req.params.id;
-//   const education = req.params.education;
-//   const address = req.params.address;
-//   res.send(
-//     `This is example of dynamic route. Hello ${id}<br/> education: ${education},<br/>address: ${address}`
-//   );
-// });
+router.get("/info/:id/education/:education/address/:address", (req, res) => {
+  const id = req.params.id;
+  const education = req.params.education;
+  const address = req.params.address;
+  res.send(
+    `This is example of dynamic route. Hello ${id}<br/> education: ${education},<br/>address: ${address}`
+  );
+});
 
 module.exports=router;

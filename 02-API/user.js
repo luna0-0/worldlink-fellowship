@@ -13,7 +13,7 @@ const app = express();
 
 router.get("/try-catch", (req, res) => {
   try {
-    // debugger;
+    debugger;
     const data = fs.readFileSync(`${__dirname}/data.json`, "utf-8");
     const jsonData = JSON.parse(data);
     res.json(jsonData);
