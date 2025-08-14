@@ -6,7 +6,7 @@ router.get("/", (req, res) => {
     const name = req.query.name;
     const country = req.query.country;
     res.send(
-        `This is static route;<br/>From<br/>Location:${location},<br/>Name:${name},<br/>Country:${country}`
+        `This is static route;<br/>From<br/>Location:${location}<br/>Name:${name}<br/>Country:${country}`
     );
 });
 
