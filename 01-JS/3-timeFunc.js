@@ -20,4 +20,16 @@ await new Promise((resolve, reject) => {
   }, 5000);
 });
 
+let a=0;
+const interval=setInterval(()=>{
+  if(a<=10){
+    console.log("In setinterval");
+    a++;
+  }
+  else{
+    clearInterval(interval);
+    console.log("Interval cleared");
+  }
+},1000);
+
 console.log("End");
